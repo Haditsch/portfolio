@@ -1,0 +1,377 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* .wrapper>* {
+    color: #fff;
+    border: 1px solid red;
+} */
+
+.about {
+    grid-area: 1 / 1 / 2/ 11;
+    z-index: 10;
+    height: 25vh;
+    position: relative;
+}
+
+.textCont {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    z-index: 10;
+}
+
+.iconCont {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    z-index: 10;
+}
+
+.cvCont {
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    z-index: 10;
+}
+
+.imageCont {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 8;
+}
+
+.linkedinSvg {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    width: 4vw;
+    height: 4vw;
+    margin-left: auto;
+}
+
+.githubSvg {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    width: 4vw;
+    height: 4vw;
+    margin-left: auto;
+}
+
+svg #githubPath {
+    transition: all 0.25s;
+}
+
+svg:hover #githubPath {
+    stroke: #00FFFF;
+}
+
+svg #linkedinPath {
+    transition: all 0.25s;
+}
+
+svg:hover #linkedinPath {
+    stroke: #00FFFF;
+}
+
+h5 {
+    font-family: "Vipnagorgialla", Arial, Helvetica, sans-serif !important;
+    font-style: italic;
+    font-weight: 1000;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: "Vipnagorgialla", Arial, Helvetica, sans-serif !important;
+    font-style: italic;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: justify;
+    font-size: 1.15vw;
+    color: white;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 480px) {
+    .about {
+        margin-bottom: 50px;
+    }
+    .wrapper {
+        height: 220vw;
+        min-height: 900px;
+        display: block;
+    }
+    .textCont {
+        width: 75%;
+        margin: 0 auto;
+        height: 300px;
+    }
+    .iconCont {
+        text-align: center;
+        margin-top: 1em;
+    }
+    .imageCont {
+        margin-top: 10vw;
+    }
+    .linkedinSvg {
+        width: 4vw;
+        height: 4vw;
+        margin-left: auto;
+    }
+    .githubSvg {
+        width: 4vw;
+        height: 4vw;
+        margin-left: auto;
+    }
+    .githubSvg svg {
+        width: 50px;
+        height: 50px;
+    }
+    .linkedinSvg svg {
+        width: 50px;
+        height: 50px;
+        margin-right: 33px;
+    }
+    .textCont p {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .about {
+        margin-bottom: 50px;
+    }
+    .wrapper {
+        height: 200vw;
+        min-height: 1200px;
+        display: block;
+    }
+    .textCont {
+        width: 75%;
+        margin: 0 auto;
+        height: 300px;
+    }
+    .iconCont {
+        text-align: center
+    }
+    .imageCont {
+        margin-top: 10vw;
+    }
+    .linkedinSvg {
+        width: 4vw;
+        height: 4vw;
+        margin-left: auto;
+    }
+    .githubSvg {
+        width: 4vw;
+        height: 4vw;
+        margin-left: auto;
+    }
+    .githubSvg svg {
+        width: 50px;
+        height: 50px;
+    }
+    .linkedinSvg svg {
+        width: 50px;
+        height: 50px;
+        margin-right: 33px;
+    }
+    .textCont p {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .about {
+        margin-top: 15vw;
+        margin-bottom: 50px;
+        height: 75px;
+    }
+    .wrapper {
+        height: 180vw;
+        min-height: 1500px;
+        display: block;
+    }
+    .textCont {
+        width: 75%;
+        margin: 0 auto;
+        height: 300px;
+    }
+    .iconCont {
+        text-align: center
+    }
+    .imageCont {
+        margin-top: 10vw;
+    }
+    .linkedinSvg {
+        width: 4vw;
+        height: 4vw;
+        margin-left: auto;
+    }
+    .githubSvg {
+        width: 4vw;
+        height: 4vw;
+        margin-left: auto;
+    }
+    .githubSvg svg {
+        width: 100px;
+        height: 100px;
+    }
+    .linkedinSvg svg {
+        width: 100px;
+        height: 100px;
+        margin-right: 33px;
+    }
+    .textCont p {
+        font-size: 1.15em;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    .wrapper {
+        height: 50vw;
+        min-height: 700px;
+        margin-bottom: 10vw;
+    }
+    .about {
+        margin-top: 15vw;
+        margin-bottom: 50px;
+        height: 75px;
+    }
+    .textCont {
+        margin-top: 3em;
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .iconCont {
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        display: grid;
+        grid-template-columns: 4 1fr;
+        grid-template-rows: 1 1fr;
+    }
+    .cvCont {
+        margin-top: 3em;
+        grid-column-start: 6;
+        grid-column-end: 9;
+        grid-row-start: 2;
+        grid-row-end: 6;
+        z-index: 10;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+    }
+    .imageCont {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 8;
+    }
+    .linkedinSvg {
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        width: 5vw;
+        height: 5vw;
+        margin-left: auto;
+    }
+    .githubSvg {
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        width: 5vw;
+        height: 5vw;
+        margin-left: auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(11, 1fr);
+        width: 100%;
+        height: 100vh;
+    }
+    .about {
+        grid-area: 1 / 1 / 2/ 11;
+        z-index: 10;
+        height: 25vh;
+        position: relative;
+    }
+    .textCont {
+        margin-top: 3em;
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        z-index: 10;
+    }
+    .iconCont {
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        display: grid;
+        grid-template-columns: 4 1fr;
+        grid-template-rows: 1 1fr;
+        z-index: 10;
+    }
+    .cvCont {
+        margin-top: 3em;
+        grid-column-start: 6;
+        grid-column-end: 9;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        z-index: 10;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+    }
+    .imageCont {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 8;
+    }
+    .linkedinSvg {
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        width: 4vw;
+        height: 4vw;
+        margin-left: auto;
+    }
+    .githubSvg {
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        width: 4vw;
+        height: 4vw;
+        margin-left: auto;
+    }
+}

@@ -1,0 +1,53 @@
+.navbar {
+    z-index: 9000;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+.navbar a {
+    font-family: "Vipnagorgialla", Arial, Helvetica, sans-serif !important;
+    font-style: italic;
+    font-weight: 1000;
+    font-size: 24pt;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 0.75px;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.5);
+    transition: all 0.5s;
+    line-height: 1.90;
+    -webkit-text-fill-color: rgba(10, 35, 49, 0);
+}
+
+.nav-link {
+    display: contents;
+}
+
+.navbar-toggler {
+    border: none;
+    color: rgb(154, 248, 255);
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(154, 248, 255, 0.75)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.active {
+    background-color: rgba(7, 0, 15, 1);
+    border-bottom: 2px solid #AF89BF;
+}
+
+.collapsing {
+    -webkit-transition: height 0s ease;
+    -o-transition: height 0s ease;
+    transition: height 0s ease;
+}

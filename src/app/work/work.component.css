@@ -1,0 +1,235 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    width: 100%;
+}
+
+
+/* .wrapper>* {
+    color: #fff;
+    border: 1px solid red;
+} */
+
+.work {
+    grid-area: 1 / 1 / 1/ 7;
+    z-index: 10;
+    position: relative;
+}
+
+.unicodeArrow {
+    -webkit-text-stroke-width: 1.75px;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.75);
+    transition: all 0.5s;
+    -webkit-text-fill-color: rgba(10, 35, 49, 0);
+}
+
+.carouselCont {
+    margin-top: 3em;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    z-index: 10;
+    justify-self: center;
+    border: 3px solid #AF89BF;
+}
+
+.carouselCont img {
+    object-fit: fill;
+}
+
+h5 {
+    font-family: "Vipnagorgialla", Arial, Helvetica, sans-serif !important;
+    font-style: italic;
+    font-weight: 1000;
+    text-transform: uppercase;
+    font-size: 1.6em;
+}
+
+p {
+    font-family: "Vipnagorgialla", Arial, Helvetica, sans-serif !important;
+    font-style: italic;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.carousel-control {
+    height: 5vw;
+    width: 5vw;
+    border: 0 none;
+}
+
+.carousel-caption {
+    margin-top: 1em;
+    position: relative;
+    left: auto;
+    right: auto;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 480px) {
+    .wrapper {
+        height: 450px;
+    }
+    .work {
+        height: 100px;
+        margin-top: 200px;
+    }
+    .unicodeArrow {
+        font-size: 50px;
+    }
+    .carouselCont {
+        width: 200px;
+        height: 100px;
+    }
+    .carouselCont img {
+        width: 200px;
+        height: 94px;
+    }
+    .carousel-control-prev {
+        margin-left: -50px;
+        margin-bottom: 0;
+    }
+    .carousel-control-next {
+        margin-right: -50px;
+        margin-bottom: 0;
+    }
+    #carouselExampleIndicators li {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .wrapper {
+        height: 90vw;
+    }
+    .work {
+        height: 100px;
+        margin-top: 200px;
+    }
+    .unicodeArrow {
+        font-size: 50px;
+    }
+    .carouselCont {
+        width: 60vw;
+        height: 30vw;
+    }
+    .carouselCont img {
+        width: 60vw;
+        height: 29vw;
+    }
+    .carousel-control-prev {
+        margin-left: -15vw;
+        margin-bottom: 0;
+    }
+    .carousel-control-next {
+        margin-right: -15vw;
+        margin-bottom: 0;
+    }
+    #carouselExampleIndicators li {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .wrapper {
+        margin-top: -30vw;
+        height: 90vw;
+    }
+    .work {
+        height: 100px;
+        margin-top: 200px;
+    }
+    .unicodeArrow {
+        font-size: 100px;
+    }
+    .carouselCont {
+        width: 60vw;
+        height: 30vw;
+    }
+    .carouselCont img {
+        width: 60vw;
+        height: 29vw;
+    }
+    .carousel-control-prev {
+        margin-left: -15vw;
+        margin-bottom: 0;
+    }
+    .carousel-control-next {
+        margin-right: -15vw;
+        margin-bottom: 0;
+    }
+    h5 {
+        font-size: 1.4em;
+    }
+    p {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    .wrapper {
+        margin-top: -5vw;
+        height: 90vw;
+    }
+    .work {
+        height: 100px;
+        margin-top: 200px;
+    }
+    .unicodeArrow {
+        font-size: 100px;
+    }
+    .carouselCont {
+        width: 60vw;
+        height: 30vw;
+    }
+    .carouselCont img {
+        width: 60vw;
+        height: 29.5vw;
+    }
+    .carousel-control-prev {
+        margin-left: -15vw;
+        margin-bottom: 0;
+    }
+    .carousel-control-next {
+        margin-right: -15vw;
+        margin-bottom: 0;
+    }
+    h5 {
+        font-size: 1.4em;
+    }
+    p {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .wrapper {
+        height: 115vh;
+    }
+    .work {
+        height: 25vh;
+    }
+    .unicodeArrow {
+        font-size: 5vw;
+    }
+    .carouselCont {
+        width: 52vw;
+        height: 26vw;
+    }
+    .carouselCont img {
+        width: 52vw;
+        height: 25.78vw;
+    }
+    .carousel-control-prev {
+        margin-left: -8vw;
+        margin-bottom: 9vw;
+    }
+    .carousel-control-next {
+        margin-right: -8vw;
+        margin-bottom: 9vw;
+    }
+}

@@ -1,13 +1,37 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>MyWebsite</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <title>Haditsch | Developer</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="/assets/svgs/sunnoglow.svg">
+    <!-- <link rel="alternate icon" href="/assets/svgs/sunnoglow.ico"> -->
+    <link rel="mask-icon" href="/assets/svgs/sunnoglow.svg" color="#07000F">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="./assets/scripts/glfx.js"></script>
+
+
 </head>
+
 <body>
-  <app-root></app-root>
+
+    <app-root></app-root>
+
+    <script>
+        //after window is loaded completely 
+        window.onload = function() {
+            //hide the preloader
+            document.querySelector("#loader-wrapper").style.display = "none";
+            document.querySelector("#loader").style.display = "block";
+
+        }
+    </script>
 </body>
+
 </html>

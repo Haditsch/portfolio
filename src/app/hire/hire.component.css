@@ -1,0 +1,935 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    width: 100%;
+    height: 100vh;
+}
+
+label {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* .wrapper>* {
+    color: #fff;
+    border: 1px solid red;
+} */
+
+.hire {
+    grid-area: 1 / 1 / 1/ 7;
+    z-index: 10;
+    height: 25vh;
+    position: relative;
+}
+
+
+/* CUSTOM HIGHLIGHTING */
+
+::selection {
+    background: #7EE8EA;
+    /* WebKit/Blink Browsers */
+}
+
+ ::-moz-selection {
+    background: #7EE8EA;
+    /* Gecko Browsers */
+}
+
+
+/* PLACEHOLDER COLOR CHANGE------------------------ */
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #f3caff;
+    opacity: 0.5;
+    /* Firefox */
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgb(243, 202, 255);
+    opacity: 0.5;
+}
+
+ ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgb(243, 202, 255);
+    opacity: 0.5;
+}
+
+.msgEmail {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    background-color: black;
+    background-image: radial-gradient( rgba(73, 0, 156, 0.75), black 120%);
+    height: 60vh;
+    z-index: 1000;
+    margin-top: 3em;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    border: 1px solid #AF89BF;
+}
+
+.msgEmail>* {
+    /* color: #fff;
+    border: 1px solid red; */
+    color: #f3caff;
+    padding-left: 2.5rem;
+    padding-top: 1.5em;
+    padding-right: 1.5em;
+}
+
+.toLabel {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.toText {
+    grid-column-start: 2;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    padding-left: 0;
+}
+
+.fromLabel {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.fromEmail {
+    grid-column-start: 2;
+    grid-column-end: 11;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.subjectLabel {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+
+.subjectEmail {
+    grid-column-start: 2;
+    grid-column-end: 11;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+
+.msgLabel {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 4;
+}
+
+.msgArea {
+    grid-column-start: 2;
+    grid-column-end: 11;
+    grid-row-start: 4;
+    grid-row-end: 11;
+}
+
+.submitBtn {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 11;
+    grid-row-end: 11;
+}
+
+.msgEmail input[type="text"] {
+    font: 1vw "ModeSeven", monospace;
+    background-color: transparent;
+    border: transparent;
+    width: 33%;
+    color: #f3caff;
+    text-shadow: 0 0 5px #C8C8C8;
+}
+
+.msgEmail input[type="submit"] {
+    font: 1vw "ModeSeven", monospace;
+    background-color: transparent;
+    border: transparent;
+    color: #f3caff;
+    text-shadow: 0 0 5px #C8C8C8;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 1em;
+    padding-right: 5px;
+    transition: all 0.5s;
+}
+
+.msgEmail input[type="submit"]:hover {
+    font: 1vw "ModeSeven", monospace;
+    color: #E2ACE3;
+    text-shadow: 0 0 5px #e89cff;
+    padding-bottom: 1em;
+}
+
+.msgEmail input:focus,
+textarea:focus {
+    outline: none;
+}
+
+.msgEmail textarea {
+    font: 1vw "ModeSeven", monospace;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 0 solid transparent;
+    color: #f3caff;
+    text-shadow: 0 0 5px #C8C8C8;
+    resize: none;
+    text-align: justify;
+}
+
+.messageCont {
+    margin-top: 3em;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 6;
+    z-index: 10;
+}
+
+h5 {
+    font-family: "Vipnagorgialla", Arial, Helvetica, sans-serif !important;
+    font-style: italic;
+    font-weight: 1000;
+    text-transform: uppercase;
+    font-size: 3em;
+}
+
+p {
+    font: 1vw "ModeSeven", monospace;
+    text-shadow: 0 0 5px #C8C8C8;
+    padding: 3px 0 5px 0;
+    margin: 0;
+}
+
+label {
+    font: 1vw "ModeSeven", monospace;
+    text-shadow: 0 0 5px #C8C8C8;
+    display: inline-block;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 480px) {
+    .msgEmail {
+        height: 60vh;
+        z-index: 1000;
+        margin: 3em 1em 0;
+        grid-column-start: 1;
+        grid-column-end: 7;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        border: 1px solid #AF89BF;
+    }
+    .msgEmail>* {
+        color: #f3caff;
+        padding-left: 0.5em;
+        padding-top: 0.5em;
+        padding-right: 0.5em;
+    }
+    .toLabel {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    .toText {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        padding-left: 0;
+    }
+    .fromLabel {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+    .fromEmail {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+    .subjectLabel {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+    .subjectEmail {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 6;
+        grid-row-end: 6;
+    }
+    .msgLabel {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 7;
+        grid-row-end: 7;
+    }
+    .msgArea {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 8;
+        grid-row-end: 11;
+    }
+    .submitBtn {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 11;
+        grid-row-end: 11;
+    }
+    .msgEmail input[type="text"] {
+        font: 1em "ModeSeven", monospace;
+        background-color: transparent;
+        border: transparent;
+        width: 100%;
+        color: #f3caff;
+        text-shadow: 0 0 5px #C8C8C8;
+    }
+    .msgEmail input[type="submit"] {
+        font: 1em "ModeSeven", monospace;
+        background-color: transparent;
+        border: transparent;
+        color: #f3caff;
+        text-shadow: 0 0 5px #C8C8C8;
+        transition: all 0.5s;
+    }
+    .msgEmail input[type="submit"]:hover {
+        font: 1em "ModeSeven", monospace;
+        color: #E2ACE3;
+        text-shadow: 0 0 5px #e89cff;
+    }
+    .msgEmail input:focus,
+    textarea:focus {
+        outline: none;
+    }
+    .msgEmail textarea {
+        font: 1em "ModeSeven", monospace;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: 0 solid transparent;
+        color: #f3caff;
+        text-shadow: 0 0 5px #C8C8C8;
+        resize: none;
+        text-align: justify;
+    }
+    .messageCont {
+        margin-top: 3em;
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 3;
+        grid-row-end: 6;
+        z-index: 10;
+    }
+    h5 {
+        font-family: "Vipnagorgialla", Arial, Helvetica, sans-serif !important;
+        font-style: italic;
+        font-weight: 1000;
+        text-transform: uppercase;
+        font-size: 3em;
+    }
+    p {
+        font: 1em "ModeSeven", monospace;
+        text-shadow: 0 0 5px #C8C8C8;
+    }
+    label {
+        font: 1em "ModeSeven", monospace;
+        text-shadow: 0 0 5px #C8C8C8;
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .hire {
+        height: 10vh;
+    }
+    .msgEmail {
+        height: 60vh;
+        z-index: 1000;
+        margin: 3em 5vw 0;
+        grid-column-start: 1;
+        grid-column-end: 7;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        border: 1px solid #AF89BF;
+    }
+    .msgEmail>* {
+        color: #f3caff;
+        padding-left: 0.5em;
+        padding-top: 0.5em;
+        padding-right: 0.5em;
+    }
+    .toLabel {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    .toText {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        padding-left: 0;
+    }
+    .fromLabel {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+    .fromEmail {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+    .subjectLabel {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+    .subjectEmail {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 6;
+        grid-row-end: 6;
+    }
+    .msgLabel {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 7;
+        grid-row-end: 7;
+    }
+    .msgArea {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 8;
+        grid-row-end: 11;
+    }
+    .submitBtn {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 11;
+        grid-row-end: 11;
+    }
+    .msgEmail input[type="text"] {
+        font: 1em "ModeSeven", monospace;
+        background-color: transparent;
+        border: transparent;
+        width: 100%;
+        color: #f3caff;
+        text-shadow: 0 0 5px #C8C8C8;
+    }
+    .msgEmail input[type="submit"] {
+        font: 1em "ModeSeven", monospace;
+        background-color: transparent;
+        border: transparent;
+        color: #f3caff;
+        text-shadow: 0 0 5px #C8C8C8;
+        transition: all 0.5s;
+    }
+    .msgEmail input[type="submit"]:hover {
+        font: 1em "ModeSeven", monospace;
+        color: #E2ACE3;
+        text-shadow: 0 0 5px #e89cff;
+    }
+    .msgEmail input:focus,
+    textarea:focus {
+        outline: none;
+    }
+    .msgEmail textarea {
+        font: 1em "ModeSeven", monospace;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: 0 solid transparent;
+        color: #f3caff;
+        text-shadow: 0 0 5px #C8C8C8;
+        resize: none;
+        text-align: justify;
+    }
+    .messageCont {
+        margin-top: 3em;
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 3;
+        grid-row-end: 6;
+        z-index: 10;
+    }
+    h5 {
+        font-family: "Vipnagorgialla", Arial, Helvetica, sans-serif !important;
+        font-style: italic;
+        font-weight: 1000;
+        text-transform: uppercase;
+        font-size: 3em;
+    }
+    p {
+        font: 1em "ModeSeven", monospace;
+        text-shadow: 0 0 5px #C8C8C8;
+    }
+    label {
+        font: 1em "ModeSeven", monospace;
+        text-shadow: 0 0 5px #C8C8C8;
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .hire {
+        height: 75px;
+    }
+    .msgEmail {
+        height: 60vh;
+        z-index: 1000;
+        margin: 3em 5vw 0;
+        grid-column-start: 1;
+        grid-column-end: 7;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        border: 1px solid #AF89BF;
+    }
+    .msgEmail>* {
+        color: #f3caff;
+        padding-left: 0.5em;
+        padding-top: 0.5em;
+        padding-right: 0.5em;
+    }
+    .toLabel {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    .toText {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        padding-left: 0;
+    }
+    .fromLabel {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+    .fromEmail {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+    .subjectLabel {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+    .subjectEmail {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 6;
+        grid-row-end: 6;
+    }
+    .msgLabel {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 7;
+        grid-row-end: 7;
+    }
+    .msgArea {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 8;
+        grid-row-end: 11;
+    }
+    .submitBtn {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 11;
+        grid-row-end: 11;
+    }
+    .msgEmail input[type="text"] {
+        font: 1em "ModeSeven", monospace;
+        background-color: transparent;
+        border: transparent;
+        width: 100%;
+        color: #f3caff;
+        text-shadow: 0 0 5px #C8C8C8;
+    }
+    .msgEmail input[type="submit"] {
+        font: 1em "ModeSeven", monospace;
+        background-color: transparent;
+        border: transparent;
+        color: #f3caff;
+        text-shadow: 0 0 5px #C8C8C8;
+        transition: all 0.5s;
+    }
+    .msgEmail input[type="submit"]:hover {
+        font: 1em "ModeSeven", monospace;
+        color: #E2ACE3;
+        text-shadow: 0 0 5px #e89cff;
+    }
+    .msgEmail input:focus,
+    textarea:focus {
+        outline: none;
+    }
+    .msgEmail textarea {
+        font: 1em "ModeSeven", monospace;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: 0 solid transparent;
+        color: #f3caff;
+        text-shadow: 0 0 5px #C8C8C8;
+        resize: none;
+        text-align: justify;
+    }
+    .messageCont {
+        margin-top: 3em;
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 3;
+        grid-row-end: 6;
+        z-index: 10;
+    }
+    h5 {
+        font-family: "Vipnagorgialla", Arial, Helvetica, sans-serif !important;
+        font-style: italic;
+        font-weight: 1000;
+        text-transform: uppercase;
+        font-size: 3em;
+    }
+    p {
+        font: 1em "ModeSeven", monospace;
+        text-shadow: 0 0 5px #C8C8C8;
+    }
+    label {
+        font: 1em "ModeSeven", monospace;
+        text-shadow: 0 0 5px #C8C8C8;
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    .hire {
+        height: 75px;
+    }
+    .msgEmail {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(11, 1fr);
+        background-color: black;
+        background-image: radial-gradient( rgba(73, 0, 156, 0.75), black 120%);
+        height: 60vh;
+        z-index: 1000;
+        margin-top: 3em;
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        border: 1px solid #AF89BF;
+    }
+    .msgEmail>* {
+        /* color: #fff;
+        border: 1px solid red; */
+        color: #f3caff;
+        padding-left: 2.5rem;
+        padding-top: 1.5em;
+        padding-right: 1.5em;
+    }
+    .toLabel {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    .toText {
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        padding-left: 0;
+    }
+    .fromLabel {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    .fromEmail {
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    .subjectLabel {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+    .subjectEmail {
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+    .msgLabel {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+    .msgArea {
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: 4;
+        grid-row-end: 11;
+    }
+    .submitBtn {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 11;
+        grid-row-end: 11;
+    }
+    .msgEmail input[type="text"] {
+        font: 1em "ModeSeven", monospace;
+        background-color: transparent;
+        border: transparent;
+        width: 100%;
+        color: #f3caff;
+        text-shadow: 0 0 5px #C8C8C8;
+    }
+    .msgEmail input[type="submit"] {
+        font: 1em "ModeSeven", monospace;
+        background-color: transparent;
+        border: transparent;
+        color: #f3caff;
+        text-shadow: 0 0 5px #C8C8C8;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 1em;
+        padding-right: 5px;
+        transition: all 0.5s;
+    }
+    .msgEmail input[type="submit"]:hover {
+        font: 1em "ModeSeven", monospace;
+        color: #E2ACE3;
+        text-shadow: 0 0 5px #e89cff;
+        padding-bottom: 1em;
+    }
+    .msgEmail input:focus,
+    textarea:focus {
+        outline: none;
+    }
+    .msgEmail textarea {
+        font: 1em "ModeSeven", monospace;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: 0 solid transparent;
+        color: #f3caff;
+        text-shadow: 0 0 5px #C8C8C8;
+        resize: none;
+        text-align: justify;
+    }
+    .messageCont {
+        margin-top: 3em;
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 3;
+        grid-row-end: 6;
+        z-index: 10;
+    }
+    h5 {
+        font-family: "Vipnagorgialla", Arial, Helvetica, sans-serif !important;
+        font-style: italic;
+        font-weight: 1000;
+        text-transform: uppercase;
+        font-size: 3em;
+    }
+    p {
+        font: 1em "ModeSeven", monospace;
+        text-shadow: 0 0 5px #C8C8C8;
+        padding: 3px 0 5px 0;
+        margin: 0;
+    }
+    label {
+        font: 1em "ModeSeven", monospace;
+        text-shadow: 0 0 5px #C8C8C8;
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .msgEmail {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(11, 1fr);
+        background-color: black;
+        background-image: radial-gradient( rgba(73, 0, 156, 0.75), black 120%);
+        height: 60vh;
+        z-index: 1000;
+        margin-top: 3em;
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        border: 1px solid #AF89BF;
+    }
+    .msgEmail>* {
+        /* color: #fff;
+        border: 1px solid red; */
+        color: #f3caff;
+        padding-left: 2.5rem;
+        padding-top: 1.5em;
+        padding-right: 1.5em;
+    }
+    .toLabel {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    .toText {
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        padding-left: 0;
+    }
+    .fromLabel {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    .fromEmail {
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    .subjectLabel {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+    .subjectEmail {
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+    .msgLabel {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+    .msgArea {
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: 4;
+        grid-row-end: 11;
+    }
+    .submitBtn {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 11;
+        grid-row-end: 11;
+    }
+    .msgEmail input[type="text"] {
+        font: 1vw "ModeSeven", monospace;
+        background-color: transparent;
+        border: transparent;
+        width: 33%;
+        color: #f3caff;
+        text-shadow: 0 0 5px #C8C8C8;
+    }
+    .msgEmail input[type="submit"] {
+        font: 1vw "ModeSeven", monospace;
+        background-color: transparent;
+        border: transparent;
+        color: #f3caff;
+        text-shadow: 0 0 5px #C8C8C8;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 1em;
+        padding-right: 5px;
+        transition: all 0.5s;
+    }
+    .msgEmail input[type="submit"]:hover {
+        font: 1vw "ModeSeven", monospace;
+        color: #E2ACE3;
+        text-shadow: 0 0 5px #e89cff;
+        padding-bottom: 1em;
+    }
+    .msgEmail input:focus,
+    textarea:focus {
+        outline: none;
+    }
+    .msgEmail textarea {
+        font: 1vw "ModeSeven", monospace;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: 0 solid transparent;
+        color: #f3caff;
+        text-shadow: 0 0 5px #C8C8C8;
+        resize: none;
+        text-align: justify;
+    }
+    .messageCont {
+        margin-top: 3em;
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 3;
+        grid-row-end: 6;
+        z-index: 10;
+    }
+    h5 {
+        font-family: "Vipnagorgialla", Arial, Helvetica, sans-serif !important;
+        font-style: italic;
+        font-weight: 1000;
+        text-transform: uppercase;
+        font-size: 3em;
+    }
+    p {
+        font: 1vw "ModeSeven", monospace;
+        text-shadow: 0 0 5px #C8C8C8;
+        padding: 3px 0 5px 0;
+        margin: 0;
+    }
+    label {
+        font: 1vw "ModeSeven", monospace;
+        text-shadow: 0 0 5px #C8C8C8;
+        display: inline-block;
+    }
+}

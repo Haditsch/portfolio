@@ -1,0 +1,35 @@
+.navbar {
+    height: 9vh;
+}
+
+@keyframes navbar-animation-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.navbar-fadeOut {
+    animation-name: navbar-animation-out;
+    animation-duration: 0.5s;
+    opacity: 0;
+    background: linear-gradient(0deg, rgba(7, 0, 15, 0) 0%, rgba(7, 0, 15, 1) 20%);
+}
+
+@keyframes navbar-animation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.navbar-inverse {
+    animation-name: navbar-animation;
+    animation-duration: .5s;
+    opacity: 1;
+    background: linear-gradient(0deg, rgba(7, 0, 15, 0) 0%, rgba(7, 0, 15, 1) 20%);
+}
