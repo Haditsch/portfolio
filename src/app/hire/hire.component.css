@@ -388,51 +388,51 @@ label {
     }
     .toLabel {
         grid-column-start: 1;
-        grid-column-end: 11;
+        grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 1;
     }
     .toText {
-        grid-column-start: 1;
+        grid-column-start: 2;
         grid-column-end: 11;
-        grid-row-start: 2;
-        grid-row-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
         padding-left: 0;
     }
     .fromLabel {
         grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    .fromEmail {
+        grid-column-start: 2;
         grid-column-end: 11;
         grid-row-start: 3;
         grid-row-end: 3;
     }
-    .fromEmail {
+    .subjectLabel {
         grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+    .subjectEmail {
+        grid-column-start: 2;
         grid-column-end: 11;
         grid-row-start: 4;
         grid-row-end: 4;
     }
-    .subjectLabel {
+    .msgLabel {
         grid-column-start: 1;
         grid-column-end: 11;
         grid-row-start: 5;
         grid-row-end: 5;
     }
-    .subjectEmail {
-        grid-column-start: 1;
-        grid-column-end: 11;
-        grid-row-start: 6;
-        grid-row-end: 6;
-    }
-    .msgLabel {
-        grid-column-start: 1;
-        grid-column-end: 11;
-        grid-row-start: 7;
-        grid-row-end: 7;
-    }
     .msgArea {
         grid-column-start: 1;
         grid-column-end: 11;
-        grid-row-start: 8;
+        grid-row-start: 6;
         grid-row-end: 11;
         min-height: 100px;
     }
@@ -526,52 +526,53 @@ label {
     }
     .toLabel {
         grid-column-start: 1;
-        grid-column-end: 11;
+        grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 1;
     }
     .toText {
-        grid-column-start: 1;
+        grid-column-start: 2;
         grid-column-end: 11;
-        grid-row-start: 2;
-        grid-row-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
         padding-left: 0;
     }
     .fromLabel {
         grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    .fromEmail {
+        grid-column-start: 2;
         grid-column-end: 11;
         grid-row-start: 3;
         grid-row-end: 3;
     }
-    .fromEmail {
+    .subjectLabel {
         grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+    .subjectEmail {
+        grid-column-start: 2;
         grid-column-end: 11;
         grid-row-start: 4;
         grid-row-end: 4;
     }
-    .subjectLabel {
+    .msgLabel {
         grid-column-start: 1;
         grid-column-end: 11;
         grid-row-start: 5;
         grid-row-end: 5;
     }
-    .subjectEmail {
-        grid-column-start: 1;
-        grid-column-end: 11;
-        grid-row-start: 6;
-        grid-row-end: 6;
-    }
-    .msgLabel {
-        grid-column-start: 1;
-        grid-column-end: 11;
-        grid-row-start: 7;
-        grid-row-end: 7;
-    }
     .msgArea {
         grid-column-start: 1;
         grid-column-end: 11;
-        grid-row-start: 8;
+        grid-row-start: 6;
         grid-row-end: 11;
+        min-height: 100px;
     }
     .submitBtn {
         grid-column-start: 1;
