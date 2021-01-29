@@ -22,8 +22,6 @@ export class HeaderComponent implements OnInit {
 
   // public navbar = document.querySelector('nav');
 
-
-
   
   @HostBinding('style.--randNum1')
   public randNum1: number = 0;
@@ -85,4 +83,5 @@ window.addEventListener('touchstart', function() {
   navLinks[i].classList.remove("crtTextStart");
   navLinks[i].classList.remove("crtTextRand");
 }
+
 });
