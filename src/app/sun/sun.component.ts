@@ -36,6 +36,25 @@ export class SunComponent implements OnInit {
 
   public mobile: boolean = false;
 
+  public getBrowserName() {
+    const agent = window.navigator.userAgent.toLowerCase()
+    switch (true) {
+      case agent.indexOf('edge') > -1:
+        return 'edge';
+      case agent.indexOf('opr') > -1 && !!(<any>window).opr:
+        return 'opera';
+      case agent.indexOf('chrome') > -1 && !!(<any>window).chrome:
+        return 'chrome';
+      case agent.indexOf('trident') > -1:
+        return 'ie';
+      case agent.indexOf('firefox') > -1:
+        return 'firefox';
+      case agent.indexOf('safari') > -1:
+        return 'safari';
+      default:
+        return 'other';
+    }
+}
 
 // sun Turbulence Animation ---------
 
@@ -44,6 +63,9 @@ export class SunComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+
+
     if (window.screen.width >= 320 && window.screen.width  <= 768) { // 768px portrait
       this.mobile = true;
     } else {
@@ -76,6 +98,7 @@ export class SunComponent implements OnInit {
 
 
   public onMouseMove: { (event: MouseEvent): void } = (event: MouseEvent) => {
+
     if(!this.mobile){
       var x = event.clientX * 1.15 / (window.innerWidth) + "%"; //get horizontal coordinate of the mouse
       var y = event.clientY * 1.15 / (window.innerHeight) + "%"; //get vertical coordinate of the mouse
@@ -102,38 +125,53 @@ export class SunComponent implements OnInit {
   ngAfterViewInit() {
     this.sunHover.nativeElement.addEventListener('mouseenter', this.onMouseOver);
     this.sunHover.nativeElement.addEventListener('mouseleave', this.onMouseLeave);
-  }
+
+    if (this.getBrowserName()==="firefox"){
+      let feDisMap = document.querySelector('#fedisplacementmap');
+      if (!feDisMap) return;
+      feDisMap.setAttribute("scale","20");
+      let sunBlur = document.querySelector('#sunImg');
+      if(!sunBlur) return;
+      sunBlur.setAttribute("style", "filter: blur(10px)");
+    } else if (this.mobile){
+      let sunBlur = document.querySelector('#sunImg');
+      if(!sunBlur) return;
+      sunBlur.setAttribute("style", "filter: blur(3px)");
+    }
+  } 
 
   onMouseOver: {(event: MouseEvent): void} = (event: MouseEvent) => {
 
-    if(this.scaleState === false){
+    if(this.getBrowserName()!=="firefox"){
+      if(this.scaleState === false){
 
-     this.enterArray.push(setInterval(() => {
-        this.scaleIncrement += 1.2;
-        this.scaleIncrementString = ""+ this.scaleIncrement;
-        this.blurIncrement += 1;
-        this.blurIncrementString = ""+ this.blurIncrement;
+        this.enterArray.push(setInterval(() => {
+            this.scaleIncrement += 1.2;
+            this.scaleIncrementString = ""+ this.scaleIncrement;
+            this.blurIncrement += 0.5;
+            this.blurIncrementString = ""+ this.blurIncrement;
 
-        let feDisMap = document.querySelector('#fedisplacementmap');
-        if (!feDisMap) return;
-        feDisMap.setAttribute("scale", this.scaleIncrementString);
-        let sunBlur = document.querySelector('#sunImg');
-        if(!sunBlur) return;
-        sunBlur.setAttribute("style", "filter: blur("+this.blurIncrementString+"px)");
-    }, 25));
-    console.table(this.enterArray);
-   
-      setTimeout(() => {
-        for(let i = 0; i < this.enterArray.length; i++){
-          clearInterval(this.enterArray[i]);
+            let feDisMap = document.querySelector('#fedisplacementmap');
+            if (!feDisMap) return;
+            feDisMap.setAttribute("scale", this.scaleIncrementString);
+            let sunBlur = document.querySelector('#sunImg');
+            if(!sunBlur) return;
+            sunBlur.setAttribute("style", "filter: blur("+this.blurIncrementString+"px)");
+        }, 25));
+        console.table(this.enterArray);
+      
+          setTimeout(() => {
+            for(let i = 0; i < this.enterArray.length; i++){
+              clearInterval(this.enterArray[i]);
 
+            }
+            this.enterArray = [];
+            this.scaleState = true;}, 250 );
+
+      } else {
+          return;
         }
-        this.enterArray = [];
-        this.scaleState = true;}, 250 );
-
-  } else {
-      return;
-    }
+    } 
   }
 
   onMouseLeave: {(event: MouseEvent): void} = (event: MouseEvent) => {
@@ -142,7 +180,7 @@ export class SunComponent implements OnInit {
       this.leaveArray.push(setInterval(() => {
         this.scaleIncrement -= 1.2;
         this.scaleIncrementString = ""+ this.scaleIncrement;
-        this.blurIncrement -= 1;
+        this.blurIncrement -= 0.5;
         this.blurIncrementString = ""+ this.blurIncrement;
 
         let feDisMap = document.querySelector('#fedisplacementmap');
