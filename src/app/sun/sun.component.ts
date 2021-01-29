@@ -34,6 +34,7 @@ export class SunComponent implements OnInit {
   public enterArray: Array<any> = [];
   public leaveArray: Array<any> = [];
 
+  public mobile: boolean = false;
 
 
 // sun Turbulence Animation ---------
@@ -43,6 +44,9 @@ export class SunComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (window.screen.width >= 320 && window.screen.width  <= 768) { // 768px portrait
+      this.mobile = true;
+    } else {
     let timeline = new TimelineMax({
       repeat: -1,
       yoyo: true
@@ -60,6 +64,7 @@ export class SunComponent implements OnInit {
       }), 0
     );
   }
+  }
 
 
 // sun Cursor Follow Function ----------
@@ -71,19 +76,20 @@ export class SunComponent implements OnInit {
 
 
   public onMouseMove: { (event: MouseEvent): void } = (event: MouseEvent) => {
+    if(!this.mobile){
+      var x = event.clientX * 1.15 / (window.innerWidth) + "%"; //get horizontal coordinate of the mouse
+      var y = event.clientY * 1.15 / (window.innerHeight) + "%"; //get vertical coordinate of the mouse
+      // //window.inner... -> get browser width/height
 
-    var x = event.clientX * 1.15 / (window.innerWidth) + "%"; //get horizontal coordinate of the mouse
-    var y = event.clientY * 1.15 / (window.innerHeight) + "%"; //get vertical coordinate of the mouse
-    // //window.inner... -> get browser width/height
-
-    for (var i = 0; i < 2; i++) {
-      if(this.sun[i]?.style){ /*this.sun[i] && this.sun[i].style*/
-        this.sun[i].style.left = x;
-        this.sun[i].style.top = y;
-        this.sun[i].style.transform = "translate(+" + x + ",+" + y + ")";
-        this.sunOverlay[i].style.left = x;
-        this.sunOverlay[i].style.top = y;
-        this.sunOverlay[i].style.transform = "translate(+" + x + ",+" + y + ")";
+      for (var i = 0; i < 2; i++) {
+        if(this.sun[i]?.style){ /*this.sun[i] && this.sun[i].style*/
+          this.sun[i].style.left = x;
+          this.sun[i].style.top = y;
+          this.sun[i].style.transform = "translate(+" + x + ",+" + y + ")";
+          this.sunOverlay[i].style.left = x;
+          this.sunOverlay[i].style.top = y;
+          this.sunOverlay[i].style.transform = "translate(+" + x + ",+" + y + ")";
+        }
       }
     }
   }

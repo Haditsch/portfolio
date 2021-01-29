@@ -1,5 +1,5 @@
 <div class="wrapper">
-    <div class="sun" [ngStyle]="{'filter': sunBlur(), 'opacity': sunOpac()}">
+    <div class="sun" [ngStyle]="{'filter': sunBlur(), 'opacity': sunOpac()}" [ngClass]="{sunMobile: mobile}">
         <div class="sunItem">
             <img src="assets\svgs\sun_alt.svg" draggable="false" id="sunImg" #sunImg/>
 

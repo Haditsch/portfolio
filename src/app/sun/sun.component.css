@@ -25,6 +25,10 @@
     -o-user-select: none;
 }
 
+.sunMobile {
+    position: absolute;
+}
+
 .sun img {
     left: 0;
     padding: 0;
