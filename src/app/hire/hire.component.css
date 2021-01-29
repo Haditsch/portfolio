@@ -37,6 +37,10 @@ label {
     /* Gecko Browsers */
 }
 
+.formContainer {
+    min-height: 100%;
+}
+
 
 /* PLACEHOLDER COLOR CHANGE------------------------ */
 
