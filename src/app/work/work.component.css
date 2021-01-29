@@ -80,7 +80,8 @@ p {
     }
     .unicodeArrow {
         font-size: 50px;
-        font: sans-serif;
+        font: "Vipnagorgialla";
+        font-style: normal;
     }
     .carouselCont {
         width: 200px;
