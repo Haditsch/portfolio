@@ -251,52 +251,53 @@ label {
     }
     .toLabel {
         grid-column-start: 1;
-        grid-column-end: 11;
+        grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 1;
     }
     .toText {
-        grid-column-start: 1;
+        grid-column-start: 2;
         grid-column-end: 11;
-        grid-row-start: 2;
-        grid-row-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
         padding-left: 0;
     }
     .fromLabel {
         grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    .fromEmail {
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    .subjectLabel {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+    .subjectEmail {
+        grid-column-start: 2;
         grid-column-end: 11;
         grid-row-start: 3;
         grid-row-end: 3;
     }
-    .fromEmail {
+    .msgLabel {
         grid-column-start: 1;
         grid-column-end: 11;
         grid-row-start: 4;
         grid-row-end: 4;
     }
-    .subjectLabel {
-        grid-column-start: 1;
-        grid-column-end: 11;
-        grid-row-start: 5;
-        grid-row-end: 5;
-    }
-    .subjectEmail {
-        grid-column-start: 1;
-        grid-column-end: 11;
-        grid-row-start: 6;
-        grid-row-end: 6;
-    }
-    .msgLabel {
-        grid-column-start: 1;
-        grid-column-end: 11;
-        grid-row-start: 7;
-        grid-row-end: 7;
-    }
     .msgArea {
         grid-column-start: 1;
         grid-column-end: 11;
-        grid-row-start: 8;
+        grid-row-start: 5;
         grid-row-end: 11;
+        min-height: 100px;
     }
     .submitBtn {
         grid-column-start: 1;
@@ -305,7 +306,7 @@ label {
         grid-row-end: 11;
     }
     .msgEmail input[type="text"] {
-        font: 1em "ModeSeven", monospace;
+        font: 0.8em "ModeSeven", monospace;
         background-color: transparent;
         border: transparent;
         width: 100%;
@@ -313,7 +314,7 @@ label {
         text-shadow: 0 0 5px #C8C8C8;
     }
     .msgEmail input[type="submit"] {
-        font: 1em "ModeSeven", monospace;
+        font: 0.8em "ModeSeven", monospace;
         background-color: transparent;
         border: transparent;
         color: #f3caff;
@@ -321,7 +322,7 @@ label {
         transition: all 0.5s;
     }
     .msgEmail input[type="submit"]:hover {
-        font: 1em "ModeSeven", monospace;
+        font: 0.8em "ModeSeven", monospace;
         color: #E2ACE3;
         text-shadow: 0 0 5px #e89cff;
     }
@@ -330,7 +331,7 @@ label {
         outline: none;
     }
     .msgEmail textarea {
-        font: 1em "ModeSeven", monospace;
+        font: 0.8em "ModeSeven", monospace;
         width: 100%;
         height: 100%;
         background-color: transparent;
@@ -356,11 +357,11 @@ label {
         font-size: 3em;
     }
     p {
-        font: 1em "ModeSeven", monospace;
+        font: 0.8em "ModeSeven", monospace;
         text-shadow: 0 0 5px #C8C8C8;
     }
     label {
-        font: 1em "ModeSeven", monospace;
+        font: 0.8em "ModeSeven", monospace;
         text-shadow: 0 0 5px #C8C8C8;
         display: inline-block;
     }
@@ -408,31 +409,31 @@ label {
     .fromEmail {
         grid-column-start: 2;
         grid-column-end: 11;
-        grid-row-start: 3;
-        grid-row-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 2;
     }
     .subjectLabel {
         grid-column-start: 1;
         grid-column-end: 2;
-        grid-row-start: 4;
-        grid-row-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
     }
     .subjectEmail {
         grid-column-start: 2;
         grid-column-end: 11;
-        grid-row-start: 4;
-        grid-row-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
     }
     .msgLabel {
         grid-column-start: 1;
         grid-column-end: 11;
-        grid-row-start: 5;
-        grid-row-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 4;
     }
     .msgArea {
         grid-column-start: 1;
         grid-column-end: 11;
-        grid-row-start: 6;
+        grid-row-start: 5;
         grid-row-end: 11;
         min-height: 100px;
     }
@@ -546,31 +547,31 @@ label {
     .fromEmail {
         grid-column-start: 2;
         grid-column-end: 11;
-        grid-row-start: 3;
-        grid-row-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 2;
     }
     .subjectLabel {
         grid-column-start: 1;
         grid-column-end: 2;
-        grid-row-start: 4;
-        grid-row-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
     }
     .subjectEmail {
         grid-column-start: 2;
         grid-column-end: 11;
-        grid-row-start: 4;
-        grid-row-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
     }
     .msgLabel {
         grid-column-start: 1;
         grid-column-end: 11;
-        grid-row-start: 5;
-        grid-row-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 4;
     }
     .msgArea {
         grid-column-start: 1;
         grid-column-end: 11;
-        grid-row-start: 6;
+        grid-row-start: 5;
         grid-row-end: 11;
         min-height: 100px;
     }
