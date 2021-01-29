@@ -39,6 +39,7 @@ label {
 
 .formContainer {
     min-height: 100%;
+    /* min-width: 100%; */
 }
 
 
