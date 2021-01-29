@@ -12,7 +12,7 @@ export class WorkComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    if (window.screen.width >= 360 && window.screen.width <= 768) { // 768px portrait
+    if (window.screen.width >= 320 && window.screen.width  <= 768) { // 768px portrait
       this.mobile = true;
     }
   }

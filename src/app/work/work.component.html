@@ -34,24 +34,14 @@
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <ng-template *ngIf="!mobile">
-                    <span class="crtTextStart unicodeArrow">🢐🢐</span>
-                    <span class="sr-only">Previous</span>
-                </ng-template>
-                <ng-template *ngIf="mobile">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </ng-template>
+                <span *ngIf="!mobile" class="crtTextStart unicodeArrow">🢐🢐</span>
+                <span *ngIf="mobile" class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
             </a>
             <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <ng-template *ngIf="!mobile">
-                    <span class="crtTextStart unicodeArrow">🢒🢒</span>
-                    <span class="sr-only">Next</span>
-                </ng-template>
-                <ng-template *ngIf="mobile">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </ng-template>
+                <span *ngIf="!mobile" class="crtTextStart unicodeArrow">🢒🢒</span>
+                <span *ngIf="mobile" class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
             </a>
         </div>
     </div>
