@@ -35,7 +35,7 @@
     border: 3px solid #AF89BF;
 }
 
-.carouselCont img {
+.carouselCont iframe {
     object-fit: fill;
 }
 
@@ -80,14 +80,15 @@ p {
     }
     .unicodeArrow {
         font-size: 50px;
+        font: sans-serif;
     }
     .carouselCont {
         width: 200px;
-        height: 100px;
+        height: 108px;
     }
-    .carouselCont img {
+    .carouselCont iframe {
         width: 200px;
-        height: 94px;
+        height: 101.67px;
     }
     .carousel-control-prev {
         margin-left: -50px;
@@ -115,11 +116,11 @@ p {
     }
     .carouselCont {
         width: 60vw;
-        height: 30vw;
+        height: 31.9vw;
     }
-    .carouselCont img {
+    .carouselCont iframe {
         width: 60vw;
-        height: 29vw;
+        height: 30.5vw;
     }
     .carousel-control-prev {
         margin-left: -15vw;
@@ -148,11 +149,11 @@ p {
     }
     .carouselCont {
         width: 60vw;
-        height: 30vw;
+        height: 31.15vw;
     }
-    .carouselCont img {
+    .carouselCont iframe {
         width: 60vw;
-        height: 29vw;
+        height: 30.5vw;
     }
     .carousel-control-prev {
         margin-left: -15vw;
@@ -184,11 +185,11 @@ p {
     }
     .carouselCont {
         width: 60vw;
-        height: 30vw;
+        height: 31.15vw;
     }
-    .carouselCont img {
+    .carouselCont iframe {
         width: 60vw;
-        height: 29.5vw;
+        height: 30.5vw;
     }
     .carousel-control-prev {
         margin-left: -15vw;
@@ -218,11 +219,11 @@ p {
     }
     .carouselCont {
         width: 52vw;
-        height: 26vw;
+        height: 26.70vw;
     }
-    .carouselCont img {
+    .carouselCont iframe {
         width: 52vw;
-        height: 25.78vw;
+        height: 26.43vw;
     }
     .carousel-control-prev {
         margin-left: -8vw;

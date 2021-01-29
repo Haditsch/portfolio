@@ -1,4 +1,4 @@
-.underConstruction,
+/* .underConstruction,
 .constructionContainer,
 .constructionSign,
 .constructionText {
@@ -41,7 +41,6 @@
         -webkit-text-stroke-width: 0.75px;
         -webkit-text-stroke-color: rgba(255, 255, 255, 0.5);
         transition: all 0.5s;
-        -webkit-text-fill-color: rgba(10, 35, 49, 0);
         text-align: center;
     }
     .constructionText {
@@ -57,7 +56,7 @@
         grid-column-end: 6;
         text-align: center;
     }
-}
+} */
 
 
 /* FONTFACE */
@@ -484,8 +483,8 @@ body {
 }
 
 .crtText {
-    animation: textShadowText 1.6s infinite;
-    mix-blend-mode: multiply;
+    /* animation: textShadowText 1.6s infinite;
+    mix-blend-mode: multiply; */
 }
 
 
@@ -559,7 +558,7 @@ body {
 
 .crtHeader {
     animation: headerShadowText 1.6s infinite;
-    mix-blend-mode: multiply;
+    /* mix-blend-mode: multiply; */
 }
 
 
@@ -650,9 +649,13 @@ body {
 
 /* CRT TV FLICKER EFFECT - Construction*/
 
+
+/* 
 .crtTextConstruction {
     animation: textShadowTextStart 150ms linear 0s 1 normal, textShadowTextRand 2s linear 150ms infinite normal;
 }
+
+*/
 
 h1 {
     font-family: "Vipnagorgialla", Arial, Helvetica, sans-serif !important;
@@ -664,12 +667,22 @@ h1 {
     bottom: 0;
     left: 0;
     right: 0;
-    color: rgb(255, 255, 255);
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: rgba(255, 255, 255, 0.5);
     transition: all 0.5s;
     -webkit-text-fill-color: rgba(10, 35, 49, 0);
+    color: rgb(255, 255, 255);
     text-shadow: 7.02956275843481219px 0 1px rgba(0, 255, 255, 0.5), -0.02956275843481219px 0 1px rgba(255, 0, 255, 0.3), 0 0 3px;
+}
+
+@supports (-moz-appearance:none) {
+    h1 {
+        z-index: 10;
+        -webkit-text-fill-color: rgba(255, 255, 255, 0.25);
+    }
+    .crtHeader {
+        z-index: 100;
+    }
 }
 
 
