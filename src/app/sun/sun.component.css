@@ -29,6 +29,10 @@
     position: absolute;
 }
 
+.turbDisplay {
+    display: none;
+}
+
 .sun img {
     left: 0;
     padding: 0;
