@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { HostBinding } from '@angular/core';
 
 
@@ -17,12 +17,7 @@ export class HeaderComponent implements OnInit {
     this.classApplied = !this.classApplied;
   }
 
-  // public toggler = document.querySelector('.navbar-toggle');
-
-
-  // public navbar = document.querySelector('nav');
-
-  
+ 
   @HostBinding('style.--randNum1')
   public randNum1: number = 0;
 
@@ -42,14 +37,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // ngAfterViewInit() {
-  //   this.navbar = document.querySelector('nav');
-  // }
-
-  // changeDropDownColor() {
-  //   console.log("click works");
-  //   this.navbar.toggleClass("navbar-yellow");
-  // }
 
   mouseLeaveEvent(){
     // if(this.iid){ ----------------> drunter shorthand dafür

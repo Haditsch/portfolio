@@ -35,7 +35,7 @@
         -webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
     }
     .navbar a:hover {
-        -webkit-text-fill-color: rgba(255, 255, 255, 0-25);
+        -webkit-text-fill-color: rgba(255, 255, 255, 0.25);
         color: white;
     }
 }
@@ -66,4 +66,19 @@
     -webkit-transition: height 0s ease;
     -o-transition: height 0s ease;
     transition: height 0s ease;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .navbar {
+        display: none;
+    }
 }

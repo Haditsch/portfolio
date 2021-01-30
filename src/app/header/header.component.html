@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md custom-toggler fixed-top" [ngClass]="{active: classApplied}">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleClass()">
+    <button #navBarToggler class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleClass()">
       <span class="navbar-toggler-icon" ></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
