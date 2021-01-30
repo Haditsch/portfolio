@@ -23,7 +23,7 @@
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
-    z-index: -90;
+    z-index: -60, -80;
 }
 
 .sunMobile {
@@ -39,6 +39,7 @@
     padding: 0;
     transition: all 0.01s;
     filter: blur(5px);
+    z-index: -10, -20;
 }
 
 .sunItem {
@@ -53,11 +54,11 @@
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
-    z-index: -70;
+    z-index: 0;
 }
 
 .hoverCircle {
-    z-index: 10000;
+    z-index: 0;
     border: 0 solid transparent;
     border-radius: 50%;
 }

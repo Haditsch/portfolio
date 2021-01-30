@@ -17,6 +17,8 @@ export class SunComponent implements OnInit {
   public sun = document.getElementsByClassName("sunItem") as HTMLCollectionOf<HTMLElement>;
  
   public sunOverlay = document.getElementsByClassName("hoverCircle") as HTMLCollectionOf<HTMLElement>;
+ 
+  public sunWrapper = document.getElementsByClassName("wrapper") as HTMLCollectionOf<HTMLElement>;
 
   public timerId: any;
 
@@ -209,11 +211,29 @@ export class SunComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
+
     let blurAmtCalc = window.pageYOffset/50;
     this.blurAmt = "blur("+blurAmtCalc+"px)";
 
     let opacAmtCalc = 1-((window.pageYOffset/1000)*1.9);
     this.opacAmt = opacAmtCalc;
+
+    if(this.opacAmt < 0) {
+      let sun = document.querySelector('.sun');
+      if(!sun) return;
+      sun.setAttribute("style", "display: none");
+      let hoverCircle = document.querySelector('.hoverCircleContainer');
+      if(!hoverCircle) return;
+      hoverCircle.setAttribute("style", "display: none");
+    } else {
+    
+        let sun = document.querySelector('.sun');
+        if(!sun) return;
+        sun.setAttribute("style", "display: block");
+        let hoverCircle = document.querySelector('.hoverCircleContainer');
+        if(!hoverCircle) return;
+        hoverCircle.setAttribute("style", "display: block");
+    }
   }
 
   sunBlur(){
