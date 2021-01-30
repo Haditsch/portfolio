@@ -14,6 +14,8 @@ import { AboutComponent } from './about/about.component';
 import { HireComponent } from './hire/hire.component';
 import { CvComponent } from './cv/cv.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
