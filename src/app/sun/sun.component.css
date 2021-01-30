@@ -23,6 +23,7 @@
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
+    z-index: -90;
 }
 
 .sunMobile {
@@ -52,6 +53,7 @@
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
+    z-index: -70;
 }
 
 .hoverCircle {
