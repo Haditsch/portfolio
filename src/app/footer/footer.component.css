@@ -6,8 +6,11 @@
         -khtml-user-select: none;
         -webkit-user-select: none;
         -o-user-select: none;
-        margin-top: -3em;
-        margin-bottom: -5vh;
+    }
+    
+    app-footer {
+        display: block;
+        position: relative;
     }
     
     p,
