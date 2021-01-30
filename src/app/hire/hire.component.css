@@ -151,6 +151,13 @@ label {
     grid-row-end: 11;
 }
 
+.error {
+    grid-column-start: 2;
+    grid-column-end: 11;
+    grid-row-start: 11;
+    grid-row-end: 11;
+}
+
 .msgEmail input[type="text"] {
     font: 1vw "ModeSeven", monospace;
     background-color: transparent;
@@ -304,6 +311,12 @@ label {
         grid-row-start: 11;
         grid-row-end: 11;
     }
+    .error {
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: 11;
+        grid-row-end: 11;
+    }
     .msgEmail input[type="text"] {
         font-size: 0.8em;
         width: 100%;
@@ -401,6 +414,12 @@ label {
     }
     .submitBtn {
         grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 11;
+        grid-row-end: 11;
+    }
+    .error {
+        grid-column-start: 2;
         grid-column-end: 11;
         grid-row-start: 11;
         grid-row-end: 11;
@@ -508,6 +527,12 @@ label {
         grid-row-start: 11;
         grid-row-end: 11;
     }
+    .error {
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: 11;
+        grid-row-end: 11;
+    }
     .msgEmail input[type="text"] {
         font-size: 1em;
         width: 100%;
@@ -606,6 +631,12 @@ label {
     .submitBtn {
         grid-column-start: 1;
         grid-column-end: 2;
+        grid-row-start: 11;
+        grid-row-end: 11;
+    }
+    .error {
+        grid-column-start: 2;
+        grid-column-end: 11;
         grid-row-start: 11;
         grid-row-end: 11;
     }
@@ -710,6 +741,12 @@ label {
     .submitBtn {
         grid-column-start: 1;
         grid-column-end: 2;
+        grid-row-start: 11;
+        grid-row-end: 11;
+    }
+    .error {
+        grid-column-start: 2;
+        grid-column-end: 11;
         grid-row-start: 11;
         grid-row-end: 11;
     }

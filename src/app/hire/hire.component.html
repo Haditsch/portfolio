@@ -22,7 +22,7 @@
             <label for="email">From: </label>
         </div>
         <div class="fromEmail">
-            <input type="text" spellcheck="false" id="email" name="_replyto" placeholder="example@mail.com" required>
+            <input type="text" spellcheck="false" id="email" name="_replyto" (keydown.space)="$event.preventDefault();" placeholder="example@mail.com" required>
         </div>
         <div class="subjectLabel noselect">
             <label for="subject">Subject: </label>
