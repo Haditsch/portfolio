@@ -27,6 +27,9 @@
         window.onload = function() {
             document.querySelector("#loader-wrapper").style.display = "none";
             document.querySelector("#loader").style.display = "block";
+            document.querySelector("#portfolio").classList.remove("preload");
+            document.querySelector("#continue").classList.remove("preload");
+            document.querySelector("#downArrow").classList.add("downArrow");
         }
     </script>
 </body>

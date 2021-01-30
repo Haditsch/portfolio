@@ -19,6 +19,10 @@
     border: 1px solid red;
 } */
     
+    .preload {
+        animation: none !important;
+    }
+    
     .portfolio {
         padding-top: 4em;
         grid-column-start: 1;
