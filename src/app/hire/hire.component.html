@@ -8,26 +8,26 @@
         </div>
     </div>
 
-    <form name="hire" class="msgEmail formContainer" method="POST" autocomplete="off" data-netlify="true">
+    <form name="hire" class="msgEmail formContainer" method="POST" autocomplete="off" netlify data-netlify="true">
 
         <div class="toLabel noselect">
             <p>To: </p>
         </div>
         <div class="toText">
             <p>stephan@haditsch.dev</p>
-            <input type="text" spellcheck="false" id="emailCC" value="stephan-haditsch@hotmail.com" style="display: none">
+            <input type="text" spellcheck="false" id="emailCC" value="stephan-haditsch@hotmail.com" name="cc" style="display: none">
         </div>
         <div class="fromLabel noselect">
             <label for="email">From: </label>
         </div>
         <div class="fromEmail">
-            <input type="text" spellcheck="false" id="email" placeholder="example@mail.com" required>
+            <input type="text" spellcheck="false" id="email" placeholder="example@mail.com" name="email" required>
         </div>
         <div class="subjectLabel noselect">
             <label for="subject">Subject: </label>
         </div>
         <div class="subjectEmail">
-            <input type="text" spellcheck="false" id="subject" placeholder="Enter subject here" required>
+            <input type="text" spellcheck="false" id="subject" placeholder="Enter subject here" name="subject" required>
         </div>
         <div class="msgLabel noselect">
             <label for="hireMsg">Message: </label>
