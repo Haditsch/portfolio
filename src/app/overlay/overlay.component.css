@@ -13,8 +13,7 @@
 
 /* LOADER */
 
-
-/* #loader-wrapper {
+#loader-wrapper {
     position: fixed;
     top: 0;
     left: 0;
@@ -63,7 +62,7 @@
     -webkit-animation: white-part 1s;
     -moz-animation: white-part 1s;
     animation: white-part 1s;
-} */
+}
 
 @-webkit-keyframes black-part {
     0% {
