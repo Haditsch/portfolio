@@ -19,7 +19,19 @@
     border: 1px solid red;
 } */
     
-    .portfolio,
+    .portfolio {
+        padding-top: 4em;
+        grid-column-start: 1;
+        grid-column-end: 12;
+        grid-row-start: 11;
+        grid-row-end: 11;
+        z-index: 100;
+        font-size: 10vw;
+        filter: blur(1.5px);
+        opacity: 0;
+        animation: 6s linear 0s 1 fadeInAndOut;
+    }
+    
     .continue {
         padding-top: 4em;
         grid-column-start: 1;
@@ -30,6 +42,7 @@
         font-size: 10vw;
         filter: blur(1.5px);
         opacity: 0;
+        animation: 5s linear 5s 1 fadeInAndOut;
     }
     
     .downArrow {
@@ -65,14 +78,6 @@
         }
     }
     
-    .portfolio {
-        animation: 5s linear 0s 1 fadeInAndOut;
-    }
-    
-    .continue {
-        animation: 5s linear 4s 1 fadeInAndOut;
-    }
-    
     @keyframes fadeIn {
         0% {
             filter: blur(300px);
@@ -100,7 +105,7 @@
     }
     
     .downArrow {
-        animation: 5.25s linear 0s 1 fadeIn, 1s linear 5.25s 1 stay, 2s linear 5.25s infinite bounce
+        animation: 6.25s linear 0s 1 fadeIn, 1s linear 6.25s 1 stay, 2s linear 6.25s infinite bounce
     }
     
     @keyframes bounce {
