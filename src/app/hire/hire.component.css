@@ -168,6 +168,16 @@ label {
     z-index: 2000;
 }
 
+.msgEmail input[type="email"] {
+    font: 1vw "ModeSeven", monospace;
+    background-color: transparent;
+    border: transparent;
+    width: 100%;
+    color: #f3caff;
+    text-shadow: 0 0 5px #C8C8C8;
+    z-index: 2000;
+}
+
 .msgEmail input[type="submit"] {
     font: 1vw "ModeSeven", monospace;
     background-color: transparent;

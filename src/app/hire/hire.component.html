@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <form name="hire" class="msgEmail formContainer" method="POST" autocomplete="off" netlify [formGroup]="contact" (ngSubmit)="onSubmit()">
+    <form [formGroup]="contactForm" name="contact" class="msgEmail formContainer" method="POST" autocorrect="off" autocapitalize="none" autocomplete="off" (ngSubmit)="onSubmit()">
         <input type="hidden" name="form-name" value="contact" />
         <div class="toLabel noselect">
             <p>To: </p>
@@ -20,7 +20,7 @@
             <label for="email">From: </label>
         </div>
         <div class="fromEmail">
-            <input type="email" spellcheck="false" id="email" placeholder="example@mail.com" formControlName="email" name="email" required>
+            <input type="text" spellcheck="false" id="email" placeholder="example@mail.com" formControlName="email" name="email" required>
         </div>
         <div class="subjectLabel noselect">
             <label for="subject">Subject: </label>
@@ -32,7 +32,7 @@
             <label for="hireMsg">Message: </label>
         </div>
         <div class="msgArea">
-            <textarea spellcheck="false" id="hireMsg" formControlName="subject" name="message" rows="8" cols="50" placeholder="Send me an e-mail if I was able to convince you that I am the right choice!" required></textarea>
+            <textarea spellcheck="false" id="hireMsg" formControlName="message" name="message" rows="8" cols="50" placeholder="Send me an e-mail if I was able to convince you that I am the right choice!" required></textarea>
         </div>
         <div class="submitBtn">
             <input type="submit" name="submit" value=">> Send" />

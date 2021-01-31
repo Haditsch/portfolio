@@ -9,7 +9,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 })
 export class HireComponent implements OnInit {
 
-  contact = new FormGroup({
+  contactForm = new FormGroup({
     email: new FormControl(''),
     subject: new FormControl(''),
     message: new FormControl('')
@@ -22,10 +22,9 @@ export class HireComponent implements OnInit {
   onSubmit() {
     const body = new HttpParams()
     .set('form-name', 'contact')
-    .append('name', this.contact.value.name)
-    .append('email', this.contact.value.email)
-    .append('art', this.contact.value.art)
-    .append('message', this.contact.value.message)
+    .append('email', this.contactForm.value.email)
+    .append('subject', this.contactForm.value.subject)
+    .append('message', this.contactForm.value.message)
     this.http.post('/', body.toString(), {headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}).subscribe(
       res => {},
       err => {
@@ -38,7 +37,7 @@ export class HireComponent implements OnInit {
           if (err.status === 200) {
             alert("Your message has been sent!");
           } else {
-            alert("Something went wrong when sending your message.");
+            alert("Something went wrong when sending your message 2.");
             console.log('Error status:');
             console.log(err.status);
             console.log('Error body:');

@@ -17,6 +17,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AutocompleteOffDirective } from './autocomplete-off.directive';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     HireComponent,
     CvComponent,
     WelcomeComponent,
+    AutocompleteOffDirective,
   ],
   imports: [
     BrowserModule,
