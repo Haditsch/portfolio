@@ -35,10 +35,10 @@ export class HireComponent implements OnInit {
         } else {
           //backend error. If status is 200, then the message successfully sent
           if (err.status === 200) {
-            alert("Your message has been sent!");
-            this.contactForm.value.email.value = "";
-            this.contactForm.value.subject.value = "";
-            this.contactForm.value.message.value = "";
+            var r = confirm("Thanks, your message has been sent!");
+            if (r == true){
+              window.location.reload();
+            }
           } else {
             alert("Something went wrong when sending your message.");
             console.log('Error status:');
